@@ -1,9 +1,9 @@
 # Notes - Module 01
 
 ## Var scoping refresher
-* You can **update** variables but you cal also **define* them. The browser doesn't warn you if you defina a variable with the same name in the same scope.
+* You can **update** variables and you can also **define* them. The browser doesn't warn you if you define a variable with the same name in the same scope.
 * Scoping; where are variables available to me? `var` variables are function scoped. Otherwise global (window)
-* Curly brackets `{}` are gatekeepers for your variable.
+* Curly brackets `{}` are gatekeepers for your variables.
 * You can update global variable inside a function. You ideally want to return it and store that in a variable.
 * Variables leak out (e.g. if statement) it scopes it to the window.
  
