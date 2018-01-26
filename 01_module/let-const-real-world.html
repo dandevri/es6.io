@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Let and Const in the Real World</title>
+</head>
+
+<body>
+  <script>
+    (function() {
+      var name = 'dan';
+      console.log(name);
+    })();
+
+    {
+      const thing = 'stuff';
+      console.log(thing);
+    }
+
+    for(var i = 0; i < 10; i++) {
+      console.log(i);
+      setTimeout(function() {
+        console.log('The Number is ' + i);
+      },1000);
+    }
+
+    for (let i = 0; i < 10; i++) {
+        console.log(i);
+        setTimeout(function () {
+          console.log('The Number is ' + i);
+        }, 1000);
+      }
+
+  </script>
+</body>
+
+</html>
