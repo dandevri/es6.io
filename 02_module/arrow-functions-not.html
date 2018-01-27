@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>ES6</title>
+  <style>
+    button {
+      font-size: 100px;
+    }
+    .on {
+      background: yellow;
+    }
+  </style>
+</head>
+
+<body>
+  <button id="pushy">Push me</button>
+  <script>
+    const button = document.querySelector('#pushy');
+    button.addEventListener('click', function() {
+      console.log(this);
+      this.classList.toggle('on');
+    });
+
+    const person = {
+      points: 23,
+      score() {
+        console.log(this);
+        this.points++;
+      }
+    }
+  </script>
+</body>
+
+</html>

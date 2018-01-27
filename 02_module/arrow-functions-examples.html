@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>ES6</title>
+</head>
+
+<body>
+  <script>
+    const race = '100m dash'
+    const winners = ['Hunter Gath', 'Singa Song', 'Imda Bos'];
+
+    const win = winners.map((winner,i) => ({name: winner, race: race, place: i + 1}));
+
+    const ages = [23, 25, 31, 22, 200, 311, 2];
+    const old = ages.filter(age => age >= 60);
+
+  </script>
+</body>
+
+</html>
