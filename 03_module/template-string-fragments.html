@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>ES6</title>
+</head>
+
+<body>
+  <script>
+    const person = {
+      name: 'Danny',
+      job: 'Developer',
+      city: 'Amsterdam'
+    }
+    const markup = 
+    `
+      <div class="person">
+      <h2>${person.name}</h2>
+      <h3>${person.job}</h2>
+      </div>
+    `
+
+    document.body.innerHTML = markup;
+
+    const dogs = [
+      {name: 'snickers', age: 2},
+      {name: 'hugo', age: 2 },
+      {name: 'sunny', age: 2 }
+    ]
+
+    const markup2 = 
+    `
+    <ul class="dogs">
+      ${dogs.map(dog => `<li>${dog.name}</li>`).join('')}
+    </ul>
+    `
+
+    document.body.innerHTML = markup2;
+
+    const song = {
+      name: 'Dying to live',
+      artist: 'Tupac',
+      featuring: 'Biggie Smalls'
+    };
+
+    const markup3 = 
+    `
+    <div class="song">
+      <p>
+        ${song.name} - ${song.artist}
+        ${song.featuring ? `(Featuring ${song.featuring})` : ''}
+      </p>
+    </div>
+    `
+
+    document.body.innerHTML = markup3;
+
+    const beer = {
+        name: 'Belgian Wit',
+        brewery: 'Steam Whistle Brewery',
+        keywords: ['pale', 'cloudy', 'spiced', 'crisp']
+      };
+
+    function renderKeywords(keywords) {
+      return `
+      <ul>
+        ${keywords.map(keyword => `<li>${keyword}</li>`).join('')}
+      </ul>
+      `
+    }
+
+    const markup4 = `
+    <div class="beer">
+      <h2>${beer.name}</h2>
+      <p class="brewery">${beer.brewery}</p>
+      ${renderKeywords(beer.keywords)}
+    </div>
+  `;
+
+  document.body.innerHTML = markup4;
+
+  </script>
+</body>
+
+</html>

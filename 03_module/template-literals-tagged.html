@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>ES6</title>
+</head>
+
+<body>
+  <script>
+    function highlight(strings, ...values) {
+      let str = '';
+      strings.forEach((string, i) => {
+        str += string + (values[i] || '');
+        str += string + (values[i] || '');
+      })
+      return str;
+    }
+
+    const name = 'snickers';
+    const age = 2;
+
+    const sentence = highlight`My dog is ${name} and age ${age * 5}.`
+    console.log(sentence);
+
+
+  </script>
+</body>
+
+</html>
