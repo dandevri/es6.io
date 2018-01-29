@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>ES6</title>
+</head>
+
+<body>
+  <script>
+    const person = {
+        first: 'Wes',
+        last: 'Bos',
+        country: 'Canada',
+        city: 'Hamilton',
+        twitter: '@wesbos'
+      };
+
+  const {first, last} = person;
+
+    const wes = {
+        first: 'Wes',
+        last: 'Bos',
+        links: {
+          social: {
+            twitter: 'https://twitter.com/wesbos',
+            facebook: 'https://facebook.com/wesbos.developer',
+          },
+          web: {
+            blog: 'https://wesbos.com'
+          }
+        }
+      };
+
+  const { twitter, facebook } = wes.links.social;
+  const {twitter: tweet, facebook: book} = wes.links.social;
+
+  const settings = {width: 300, color: 'black'};
+  const {width, height, color, fontSize} = settings;
+  
+  </script>
+</body>
+
+</html>
