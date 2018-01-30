@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>ES6</title>
+</head>
+
+<body>
+  <div class="people">
+    <p>Danny</p>
+    <p>Peter</p>
+    <p>Pieter</p>
+  </div>
+  <script>
+    // const people = document.querySelectorAll('.people p');
+    // const peopleArray = Array.from(people);
+    // console.log(people);
+    // console.log(peopleArray);
+    // const names = peopleArray.map(function(person) {
+    //   return person.textContent;
+    // })
+
+    function sumAll() {
+      const nums = Array.from(arguments);
+      return nums.reduce((prev, next) => prev + next, 0);
+    }
+
+    console.log(sumAll(23,34,32,23));
+
+    const stuff = Array.of(12,34,53,2);
+    console.log(stuff);
+
+  </script>
+</body>
+
+</html>
