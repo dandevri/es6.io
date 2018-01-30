@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>ES6</title>
+</head>
+
+<body>
+  <script>
+    const cuts = ['Chuck', 'Brisket', 'Shank', 'Rib'];
+
+    // for(const index in cuts) {
+    //   console.log(cuts[index]);
+    // }
+
+    cuts.forEach((cut) => {
+      console.log(cut);
+    })
+
+  
+    for(const cut of cuts) {
+      console.log(cut);
+      if(cut === 'Brisket') {
+        break;
+      }
+    }
+
+  </script>
+</body>
+
+</html>

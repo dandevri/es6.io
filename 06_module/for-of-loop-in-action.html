@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>ES6</title>
+</head>
+
+<body>
+  <p>Paragraph</p>
+  <p>Paragraph1</p>
+  <p>Paragraph2</p>
+  <p>Paragraph3</p>
+  <script>
+    const cuts = ['Chuck', 'Brisket', 'Shank', 'Rib'];
+
+    // for(const [i, cut] of cuts.entries()) {
+    //   console.log(i, cut);
+    // }
+
+    // function addUpNumbers() {
+    //   let total = 0;
+    //   for(num of arguments) {
+    //     total += num;
+    //   }
+    //   console.log(total);
+    //   return total;
+    // }
+    // addUpNumbers(12,32,43,2,2,33);
+
+    // const name = 'wes bos';
+    // for(const char of name) {
+    //   console.log(char);
+    // }
+    
+    const paragraphs = document.querySelectorAll('p');
+    paragraphs.forEach((paragraph) => {
+      paragraph.addEventListener('click', function() {
+        console.log(this.textContent);
+      })
+    })
+  </script>
+</body>
+
+</html>
