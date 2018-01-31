@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>ES6</title>
+</head>
+
+<body>
+  <script>
+      const inventors = ['Einstein', 'Newton', 'Galileo'];
+      const newInventors = ['Musk', 'Jobs'];
+
+      inventors.push(...newInventors);
+
+      console.log(inventors);
+
+      const name = ['Danny', 'de Vries'];
+
+      function sayHi(first, last) {
+        alert(`Hey There ${first} ${last}`);
+      }
+
+      sayHi(...name);
+
+  </script>
+</body>
+
+</html>
