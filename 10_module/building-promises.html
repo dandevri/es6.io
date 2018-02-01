@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>ES6</title>
+</head>
+
+<body>
+  <script>
+    const p = new Promise((resolve, reject) => {
+      resolve('Wes is Cool');
+    });
+
+    p
+      .then(data => { console.log(data);})
+      .catch(err => {
+        console.error(err);
+      })
+  </script>
+</body>
+
+</html>
