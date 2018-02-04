@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>ES6</title>
+</head>
+
+<body>
+  <script>
+    function Dog(name, breed) {
+      this.name = name;
+      this.breed = breed;
+    }
+
+    Dog.prototype.bark = function() {
+      console.log('Bark bark!')
+    }
+
+    const snickers = new Dog('snickers', 'King Charles');
+  </script>
+</body>
+
+</html>
