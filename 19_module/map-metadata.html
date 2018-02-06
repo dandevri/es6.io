@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>ES6</title>
+</head>
+
+<body>
+  <button>Snakes 🐍</button>
+  <button>Cry 😂</button>
+  <button>Ice Cream 🍦</button>
+  <button>Flamin' 🔥</button>
+  <button>Dancer 💃</button>
+
+  <script>
+    const clickCounts = new Map();
+    const buttons = document.querySelectorAll('button');
+
+    buttons.forEach(button => {
+      clickCounts.set(button, 0);
+      button.addEventlistener('click', function() {
+        const val = clockCounts.get(this);
+        clickCounts.set(this);
+        console.log(clickCounts);
+      })
+    })
+  </script>
+</body>
+
+</html>
