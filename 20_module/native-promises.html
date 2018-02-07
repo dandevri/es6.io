@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>ES6</title>
+</head>
+
+<body>
+  <video controls class="handsome"></video>
+  <script>
+    // fetch('api.github.com/users/wesbos').then(res => {
+    //   return res.json();
+    // }).then( res => {
+    //   console.log(res);
+    // }).catch(err => {
+    //   console.log('Oh no');
+    //   console.error(err);
+    // });
+
+    const video = document.querySelector('.video');
+
+    navigator.mediaDevices.getUserMedia({video: true}).then(mediaStream => {
+      video.srcObject = mediaStream;
+      video.load();
+      video.play();
+    }).catch(err => {
+      console.log(error);
+    })
+  </script>
+</body>
+
+</html>

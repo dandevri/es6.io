@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>ES6</title>
+</head>
+
+<body>
+  <script>
+    function breathe(amount) {
+        return new Promise((resolve, reject) => {
+          if (amount < 500) {
+            reject('That is a small value');
+          }
+          setTimeout(() => resolve('Done!'), amount)
+        })
+      }
+
+      // async function go() {
+      //   try {
+      //     console.log('start');
+      //     const response = await breathe(600);
+      //     console.log(response);
+      //     console.log('end');
+      //   } catch(err) {
+      //     console.error(err);
+      //   }
+      // }
+
+      function catchErrors(fn) {
+        return function(...args) {
+          return fn(...args).catch((err) => {
+            console.error(err);
+          });
+        }
+      }
+
+        async function go(name, last) {
+          console.log(`Starting: ${name}`)
+          console.log('start');
+          const response = await breathe(600);
+          console.log(response);
+          console.log('end');
+        }      
+      
+      // go();
+
+      const wrappedFunction = catchErrors(go);
+      wrappedFunction('Danny', 'de Vries');
+  </script>
+</body>
+
+</html>

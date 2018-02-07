@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>ES6</title>
+</head>
+
+<body>
+  <script>
+      function breathe(amount) {
+        return new Promise((resolve, reject) => {
+          if (amount < 500) {
+            reject('That is a small value');
+          }
+          setTimeout(() => resolve('Done!'), amount)
+        })
+      }
+
+      async function go() {
+        console.log('start');
+        const response = await breathe(600);
+        console.log(response);
+        console.log('end');
+      }
+
+      go();
+
+  </script>
+</body>
+
+</html>
