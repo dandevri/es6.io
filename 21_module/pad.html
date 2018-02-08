@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>ES6</title>
+</head>
+
+<body>
+  <script>
+    console.log('dan'.padStart(6));
+    console.log('dan'.padEnd(6, '_'));
+
+    const strings = ['short', 'medium size', 'this is really long']
+    const lengths = strings.sort(str => str.length).map(str => str.length)[0];
+
+    strings.forEach(str => {
+      console.log(str.padStart(lengths));
+    })
+  </script>
+</body>
+
+</html>
