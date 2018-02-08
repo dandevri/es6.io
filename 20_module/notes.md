@@ -44,3 +44,11 @@
 * High order function; Takes a function as an argument and return a new function to yourself. 
 * Create a function that caches the error.
 * You can pass in arguments with `...args` spread and rest operator
+
+## Waiting on Multiple Promises
+* Be careful with await; not always do you want one thing after other.
+* You want to fire different tasks and all of them to come back at the same time.
+
+## Promisify callback functions
+* Async await and promises are really nice to write, but still alot of browser api's are callbacks.
+* With async and promises you can promisify these functions.
